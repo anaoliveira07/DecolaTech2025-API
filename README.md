@@ -16,5 +16,5 @@ Este projeto consiste em uma API para gerenciamento de tarefas diárias. A API p
 
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seuusuario/taskmaster-api.git
+   git clone https://github.com/anaoliveira07/DecolaTech2025-API
    cd taskmaster-api
