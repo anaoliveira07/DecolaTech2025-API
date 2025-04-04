@@ -1,0 +1,32 @@
+package me.dio.taskmaster.service;
+
+import me.dio.taskmaster.model.Task;
+import me.dio.taskmaster.repository.TaskRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
+
+@Service
+public class TaskService {
+
+    @Autowired
+    private TaskRepository taskRepository;
+
+    public List<Task> listarTodasTarefas() {
+        return taskRepository.findAll();
+    }
+
+    public Optional<Task> buscarTarefaPorId(Long id) {
+        return taskRepository.findById(id);
+    }
+
+    public Task salvarTarefa(Task task) {
+        return taskRepository.save(task);
+    }
+
+    public void excluirTarefa(Long id) {
+        taskRepository.deleteById(id);
+    }
+}
